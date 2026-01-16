@@ -1,0 +1,10 @@
+*.pdf
+
+# macOS
+.DS_Store
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc

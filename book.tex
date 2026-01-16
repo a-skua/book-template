@@ -1,0 +1,33 @@
+\input{src/_config}
+
+\ifdefined\showTrimmarks
+    \usepackage{jlreq-trimmarks}
+\fi
+
+\begin{document}
+
+% 表紙
+\input{src/cover_a}
+
+\title{\bookTitle}
+\author{\bookAuthor}
+\date{\bookDate}
+
+\maketitle
+
+\input{src/margin}
+
+\input{src/はじめに}
+
+\tableofcontents
+
+\input{src/example}
+
+\appendix
+
+\input{src/あとがき}
+
+% 裏表紙
+\input{src/cover_z}
+
+\end{document}

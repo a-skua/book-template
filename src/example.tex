@@ -1,0 +1,70 @@
+\chapter{\chTitleExample}\label{ch:example}
+
+こんな感じで章を書き始めてください．
+章題に\lstinline{\label}をつけておくと，次のように参照リンクを作成できるようになります．
+
+\begin{columnbox}
+  \textbf{ページリンクの作り方}
+
+  詳しくは\ref{ch:example}章を参照してください．
+\end{columnbox}
+
+\section{基本的な文章の書き方}
+
+文章は偶数ページなることを意識してあるととても良いです．
+印刷所には4の倍数で入稿するため，4の倍数を意識できていると直良．
+
+ただし，校正段階で改ページを入れたり，画像などの並び替えを行うこともできるため，はじめはそんなに意識しなくてもOKです．
+
+
+\subsection{章立て}
+
+\lstinline{\chapter}，\lstinline{\section}，\lstinline{\subsection}の3段階まででお願いします．
+目次にも載るので，\lstinline{\subsection}は細かく入れてしまって問題ないです．
+
+\subsection{コードの埋め込み}
+
+\lstinline{src/<TITLE>.d/}の中にコードを配置し，次のようにして埋め込んでください．
+
+\lstinputlisting[caption={example.txt}]{src/example.d/example.txt}
+
+\subsection{コラム}
+
+\begin{columnbox}
+  \textbf{コラム : コラムの書き方}
+
+  コラム用のブロックを用意しています．
+  必要に応じて使ってください．
+\end{columnbox}
+
+執筆中は必要以上に気にする必要はないですが，編集で改ページを入れるなどして偶数ページになるよう調整します．
+
+\newpage
+
+\subsection{著者名}
+
+\begin{flushright}
+  \authorExample
+\end{flushright}
+
+src/\_config.texに著者名を定義してあります．
+著者名を使いたい場合はこの定義を利用してください．
+\footnote{必要に応じて定義を変更してもらってOKです．}
+
+\begin{enumerate}
+  \item \authorExample{}
+\end{enumerate}
+
+\subsection{画像の埋め込み}
+
+コード同様に\lstinline{src/<TITLE>.d/}の中に画像を置いてください．
+
+\includeimage{0.75}{src/example.d/example.jpg}{サンプル画像}
+
+\begin{enumerate}
+  \item サンプル画像はカラーになっていますが，印刷はグレイスケールになります．
+  \item ダークモード系のスクショは印刷との相性が悪いのでできれば避けてください．
+  \item 印刷はB5jの350dpiで入稿します．
+    あまり低すぎなければ問題ないですが，1ファイルのサイズが大きいとデジタル版の容量が増すので良い感じに．
+    横2000pxくらいを最大サイズで考えていれば多分大丈夫です．
+\end{enumerate}

@@ -1,0 +1,6 @@
+InfoBegin
+InfoKey: Title
+InfoValue: 本タイトル
+InfoBegin
+InfoKey: Author
+InfoValue: 著者名
