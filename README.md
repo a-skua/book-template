@@ -1,6 +1,6 @@
 # 同人誌テンプレート
 
-LaTeXで同人誌を作成するためのテンプレートです．
+LaTeXで同人誌を作成するための[テンプレート](https://github.com/a-skua/book-template)です．
 
 ## 環境構築
 
