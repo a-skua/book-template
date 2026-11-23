@@ -1,10 +1,12 @@
+FILENAME := example
+
 SRC := $(shell find ./src)
 OUTPUT := $(shell find . -name '*.pdf' -or -name '*.aux' -or -name '*.log' -or -name '*.out' -or -name '*.toc')
 
 .PHONY: all
-all: example.pdf printable/book_gray.pdf
+all: $(FILENAME).pdf printable/book_gray.pdf
 
-example.pdf: book.pdf METADATA.txt
+$(FILENAME).pdf: book.pdf METADATA.txt
 	pdftk $< update_info_utf8 $(word 2, $^) output $@
 
 printable/%_gray.pdf: printable/%.pdf
